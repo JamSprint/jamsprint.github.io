@@ -1,0 +1,8 @@
+
+# files
+
+*.lock
+
+# directories
+
+_site
