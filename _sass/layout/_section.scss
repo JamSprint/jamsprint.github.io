@@ -1,0 +1,39 @@
+.section {
+  min-height: 70vh;
+
+  text-align: center;
+
+  padding: 2.4rem;
+
+  &__content {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    margin: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+
+  // Solution to fixed header problem and section anchors
+  &__target {
+    position: relative;
+    top: -8vh;
+  }
+}

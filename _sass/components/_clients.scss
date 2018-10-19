@@ -1,0 +1,12 @@
+.clients {
+  background-color: rgb(255, 153, 0);
+  text-align: left;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    max-width: 280px;
+  }
+}

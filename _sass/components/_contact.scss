@@ -1,0 +1,17 @@
+.contact {
+
+  background-color: #4c4c4c;
+  &__content {
+    margin-top: 2.4rem;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: left;
+    margin-left: -.5rem;
+  }
+
+  &__list-item {
+    margin: .1rem 0;
+  }
+}

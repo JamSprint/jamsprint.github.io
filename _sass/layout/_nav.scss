@@ -1,0 +1,137 @@
+.navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+
+    border-radius: 5px;
+    height: 4rem;
+    text-align: center;
+    width: 4rem;
+
+    position: fixed;
+    top: 0;
+    right: 3rem;
+    z-index: 2000;
+
+
+  }
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+
+    display: inline-block;
+    background-color: black;
+    position: absolute;
+    height: 5px;
+    width: 1.8rem;
+  }
+  &__icon {
+
+    top: 50%;
+    left: 25%;
+
+
+    &::before {
+      content:"";
+      top: -.7rem;
+      left: 0;
+
+    }
+    &::after {
+      content:"";
+      top: .7rem;
+      left: 0;
+
+    }
+
+    &::before, &::after {
+      transition: all .2s;
+    }
+  }
+
+  &__nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top : 4rem;
+    right: 2rem;
+
+  }
+
+  &__link {
+
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    margin: .5px;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: visibility ease-in-out;
+
+    &:nth-child(1) {
+      transition-delay: .15s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: .13s;
+    }
+    &:nth-child(3) {
+      transition-delay: .11s;
+    }
+    &:nth-child(4) {
+      transition-delay: .09s;
+    }
+    &:nth-child(5) {
+      transition-delay: .07s;
+    }
+    &:nth-child(6) {
+      transition-delay: .05s;
+    }
+  }
+
+  &__link,
+  &__link:visited {
+    color: black;
+  }
+
+  &__link:active {
+    background-color: lightgrey;
+  }
+
+  // Functionality
+  &__checkbox:checked ~ &__nav {
+    visibility: visible;
+  }
+  &__checkbox:checked ~ &__nav > &__link {
+    transition: visibility .5s ease-in-out;
+  }
+  &__checkbox:checked ~ &__nav > &__link:nth-child(2) {
+    transition-delay: .05s;
+  }
+  &__checkbox:checked ~ &__nav > &__link:nth-child(3) {
+    transition-delay: .07s;
+  }
+  &__checkbox:checked ~ &__nav > &__link:nth-child(4) {
+    transition-delay: .07s;
+  }
+  &__checkbox:checked ~ &__nav > &__link:nth-child(5) {
+   transition-delay: .11s;
+  }
+  &__checkbox:checked ~ &__nav > &__link:nth-child(6) {
+    transition-delay: .13s;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: -.9rem;
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: .9rem;
+  }
+
+}

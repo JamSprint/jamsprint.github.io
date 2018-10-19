@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}
+
+button, button:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}

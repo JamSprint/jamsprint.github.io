@@ -1,0 +1,30 @@
+.career {
+  background-color: rgb(0, 148, 208);
+  text-align: left;
+
+  &__content {
+    align-items: flex-start;
+  }
+  &__block {
+    margin: 1rem;
+
+    &-list-item {
+      font-size: 1.6rem;
+      margin: .5rem 0 .5rem 2rem;
+    }
+
+    &-paragraph {
+      margin: 1rem 0;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__heading {
+    color: #383838;
+  }
+
+}

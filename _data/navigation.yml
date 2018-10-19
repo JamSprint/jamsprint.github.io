@@ -1,0 +1,12 @@
+- name: Hem
+  link: /
+- name: Vad gör vi
+  link: "#services"
+- name: Referenser
+  link: "#clients"
+- name: Jobb
+  link: "#career"
+- name: Team
+  link: "#team"
+- name: Kontakta oss
+  link: "#contact"

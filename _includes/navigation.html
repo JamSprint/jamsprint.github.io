@@ -1,0 +1,17 @@
+
+<div class="navigation">
+
+  <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+  <label for="navi-toggle" class="navigation__button">
+    <span class="navigation__icon">&nbsp;</span>
+  </label>
+
+  <nav class="navigation__nav" id="nav">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" class="navigation__link">
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </nav>
+</div>

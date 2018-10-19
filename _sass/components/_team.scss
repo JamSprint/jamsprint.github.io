@@ -1,0 +1,24 @@
+.team {
+  background-color: #a0abb8;
+
+  &__paragraph {
+    text-align: left;
+    margin-bottom:.5rem;
+    //width: 75%;
+  }
+
+  &__member {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    width: 70%;
+    &-image {
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+#team__controls {
+  top: 22%;
+}

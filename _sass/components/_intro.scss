@@ -1,0 +1,13 @@
+.intro {
+  background-color: grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__paragraph {
+    width: 75%;
+    font-size: 1.6rem;
+  }
+}
