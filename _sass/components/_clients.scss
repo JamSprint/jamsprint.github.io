@@ -1,9 +1,20 @@
 .clients {
   background-color: rgb(255, 153, 0);
   text-align: left;
+  @media only screen and (min-width:$bp-small) {
+    text-align: left;
+  }
 
   &__list {
+    align-self: flex-start;
     list-style: none;
+    margin: 1rem 0;
+    @media only screen and (min-width: $bp-small) {
+      align-self: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2.4rem 0 0 0;
+    }
   }
 
   &__list-item {

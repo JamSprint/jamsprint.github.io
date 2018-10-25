@@ -39,6 +39,5 @@ function carousel(container){
   }
 }
 
-
-var carouselOne = carousel(document.getElementById('carouselServices'));
-var carouselTwo = carousel(document.getElementById('carouselTeam'));
+const carouselOne = carousel(document.getElementById('carouselServices'));
+const carouselTwo = carousel(document.getElementById('carouselTeam'));

@@ -1,11 +1,64 @@
 .services {
   background-color: #9bb056;
 
-  &__paragraph {
+  &__subtitle {
+
+    text-transform: uppercase;
+    position:relative;
     width: 75%;
+
+    &::before, &::after {
+      content:"";
+      height:1px;
+      width:40%;
+      background-color: white;
+      position: absolute;
+      top:50%;
+      opacity:.3;
+    }
+    &::before {
+      transform: translateX(-100%);
+    }
   }
 
-  p {
-    margin: .5rem;
+  &__list {
+    @media only screen and (min-width: $bp-small) {
+      list-style: none;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+  }
+
+  &__item {
+
+    &-paragraph {
+      margin: .5rem;
+    }
+
+    @media only screen and (min-width: $bp-small) {
+      padding: .5rem;
+      opacity: .9;
+      width: calc(100% / 3);
+
+      i {
+        font-size: 10rem;
+      }
+
+      &:hover {
+        opacity:1;
+      }
+    }
+
+    @media only screen and (min-width: $bp-large) {
+
+      &-header {
+        font-size:3.2rem;
+      }
+
+      &-paragraph {
+        font-size:2.4rem;
+      }
+    }
   }
 }

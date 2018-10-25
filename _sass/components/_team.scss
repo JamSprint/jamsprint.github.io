@@ -1,20 +1,53 @@
 .team {
   background-color: #a0abb8;
 
+  &__list {
+    list-style: none;
+    @media only screen and (min-width: $bp-small) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &-item {
+      @media only screen and (min-width: $bp-small) {
+        padding: 1%;
+        width: calc(100% / 4);
+      }
+    }
+  }
+
   &__paragraph {
     text-align: left;
     margin-bottom:.5rem;
-    //width: 75%;
   }
 
   &__member {
     margin: 0 auto;
-    font-size: 1.8rem;
     width: 70%;
+
+    @media only screen and (min-width: $bp-small) {
+      width: 100%;
+    }
+
+    &-heading {
+      font-size: 2.4rem;
+      @media only screen and (min-width: $bp-small) {
+        font-size: 1.6rem;
+      }
+    }
+    &-subheading {
+      font-size: 2rem;
+      @media only screen and (min-width: $bp-small) {
+        font-size: 1.6rem;
+      }
+    }
     &-image {
+      margin:0 auto;
+      width: 90%;
       img {
         border-radius: 5px;
       }
+
     }
   }
 }

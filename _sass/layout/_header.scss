@@ -5,7 +5,7 @@
   left:0;
 
   background-color: white;
-  height: 8vh;
+  min-height: 8vh;
   width: 100%;
 
   display: flex;
@@ -14,8 +14,18 @@
 
   z-index: 9999;
 
+  @media only screen and (min-width: $bp-medium) {
+      min-height: 5vh;
+    }
+
   &__content {
     width: 80%;
+    max-width: $bp-large;
 
+    @media only screen and (min-width: $bp-medium) {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+      }
   }
 }

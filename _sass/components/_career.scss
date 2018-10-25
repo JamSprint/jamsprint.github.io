@@ -2,11 +2,34 @@
   background-color: rgb(0, 148, 208);
   text-align: left;
 
-  &__content {
-    align-items: flex-start;
+  &__heading {
+    color: #383838;
+    font-size: 1.6rem;
+  }
+
+  &__paragraph {
+    align-self: flex-start;
+  }
+
+  &__blocks {
+    align-self: flex-start;
+    @media only screen and (min-width: $bp-small) {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 auto;
+    }
+
   }
   &__block {
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
+
+    @media only screen and (min-width: $bp-small) {
+      width: 30rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      margin-right: 2rem;
+    }
 
     &-list-item {
       font-size: 1.6rem;
@@ -20,11 +43,18 @@
   }
 
   &__link {
-    color: inherit;
+    transition: all .3s;
+
+    &:active {
+      color: #4c4c4c;
+    }
+
+    &:hover {
+      display: inline-block;
+      transform: translateY(-1px);
+    }
   }
 
-  &__heading {
-    color: #383838;
-  }
+
 
 }

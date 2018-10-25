@@ -10,7 +10,9 @@
   <nav class="navigation__nav" id="nav">
     {% for item in site.data.navigation %}
       <a href="{{ item.link }}" class="navigation__link">
-        {{ item.name }}
+
+        <span>{{ item.name }}</span>
+        <span></span>
       </a>
     {% endfor %}
   </nav>

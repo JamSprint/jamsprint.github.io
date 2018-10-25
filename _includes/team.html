@@ -6,57 +6,37 @@
       Om du vill ta kontakt med någon av oss så är mailadressen
       förnamn.efternamn (at) jamsprint.com
      </p>
+    <ul class="team__list u-show-desktop">
+      {% for item in site.data.team %}
+      <li class="team__list-item">
+        <div class="team__member">
+          <div class="team__member-image">
+            <img src="assets/images/team/{{ item.image }}" alt="Picture of {{ item.name }}">
+          </div>
+          <h3 class="team__member-heading">{{ item.name }}</h3>
+          <p class="team__member-subheading">
+            {{ item.role }}
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
 
-     <div class="carousel" id="carouselTeam">
+     <div class="carousel u-show-mobile" id="carouselTeam">
       <ul class="carousel__list list">
+        {% for item in site.data.team %}
         <li class="carousel__list-item item">
           <div class="team__member">
             <div class="team__member-image">
-              <img src="assets/images/team/martin_hedbäck.jpg" alt="Picture of Martin Hedbäck">
+              <img src="assets/images/team/{{ item.image }}" alt="Picture of {{ item.name }}">
             </div>
-            <h3 class="team__member-heading">Martin Hedbäck</h3>
+            <h3 class="team__member-heading">{{ item.name }}</h3>
             <p class="team__member-subheading">
-              Projektledare
+              {{ item.role }}
             </p>
           </div>
-
         </li>
-        <li class="carousel__list-item item">
-          <div class="team__member">
-            <div class="team__member-image">
-              <img src="assets/images/team/marcus_sundberg.jpg" alt="Picture of Marcus Sundberg">
-            </div>
-            <h3 class="team__member-heading">Marcus Sundberg</h3>
-            <p class="team__member-subheading">
-              Utvecklare
-            </p>
-          </div>
-
-        </li>
-        <li class="carousel__list-item item">
-          <div class="team__member">
-            <div class="team__member-image">
-              <img src="assets/images/team/aaron_wong.jpg" alt="Picture of Aaron Wong">
-            </div>
-            <h3 class="team__member-heading">Aaron Wong</h3>
-            <p class="team__member-subheading">
-              Utvecklare
-            </p>
-          </div>
-
-        </li>
-        <li class="carousel__list-item item">
-          <div class="team__member">
-            <div class="team__member-image">
-              <img src="assets/images/team/joacim_alvergren.jpg" alt="Picture of Joacim Alvergren">
-            </div>
-            <h3 class="team__member-heading">Joacim Alvergren</h3>
-            <p class="team__member-subheading">
-              Utvecklare
-            </p>
-          </div>
-
-        </li>
+        {% endfor %}
       </ul>
 
        <div class="carousel__window window">

@@ -5,23 +5,18 @@
   }
 
   &__button {
-
     border-radius: 5px;
     height: 4rem;
-    text-align: center;
     width: 4rem;
 
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     right: 3rem;
-    z-index: 2000;
-
-
   }
   &__icon,
   &__icon::before,
   &__icon::after {
-
     display: inline-block;
     background-color: black;
     position: absolute;
@@ -29,10 +24,9 @@
     width: 1.8rem;
   }
   &__icon {
-
     top: 50%;
+    transform: translateY(-50%);
     left: 25%;
-
 
     &::before {
       content:"";
@@ -51,20 +45,34 @@
       transition: all .2s;
     }
   }
+  &__button, &__icon {
+    @media only screen and (min-width: $bp-medium) {
+      display: none;
+    }
+  }
 
   &__nav {
     visibility: hidden;
     display: flex;
     flex-direction: column;
 
-    position: fixed;
-    top : 4rem;
-    right: 2rem;
+    position: absolute;
+    top : 100%;
+    right: 1rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      flex-direction: row;
+      position: static;
+      visibility: visible;
+    }
 
   }
 
+  &__link,
+  &__link:visited {
+    color: #000000ab;
+  }
   &__link {
-
     background-color: white;
     border: 1px solid black;
     font-size: 1.6rem;
@@ -93,11 +101,58 @@
     &:nth-child(6) {
       transition-delay: .05s;
     }
-  }
 
-  &__link,
-  &__link:visited {
-    color: black;
+    @media only screen and (min-width: $bp-medium) {
+      border:none;
+      font-weight: 600;
+      position:relative;
+
+        // Achieves hover effect with different background on menu items.
+        span:nth-child(1) { // Text
+          position: relative;
+          z-index:999
+        }
+        span:nth-child(2) { // Background
+          display: inline-block;
+          height:2px;
+          width: 95%;
+          position:absolute;
+          top: 0;
+          left:3px;
+          transition: all .4s;
+        }
+
+        &:nth-child(2) span:nth-child(2) {
+          background-color:#9bb056;
+        }
+        &:nth-child(3) span:nth-child(2) {
+          background-color:#ff9900;
+        }
+        &:nth-child(4) span:nth-child(2) {
+          background-color:#0094d0;
+        }
+        &:nth-child(5) span:nth-child(2) {
+          background-color:#a0abb8;
+        }
+        &:nth-child(6) span:nth-child(2) {
+          background-color:#4c4c4c;
+        }
+
+        &:hover {
+          span:nth-child(1) {
+            color:white;
+          }
+          span:nth-child(2) {
+            height:100%;
+          }
+        }
+
+        &:nth-child(1):hover {
+          span:nth-child(1) {
+            color: #000;
+          }
+        }
+     }
   }
 
   &__link:active {

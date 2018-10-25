@@ -1,9 +1,9 @@
 .carousel {
 
-  //border:1px solid black;
   position: relative;
   min-height: 300px;
   width: 100%;
+  max-width: $bp-small;
   &__list {
     display: none;
   }
@@ -14,12 +14,6 @@
     i {
       font-size: 12rem;
     }
-  }
-
-  &__window {
-    //border:2px solid orangered;
-    height: 100%;
-
   }
 
   &__controls {
@@ -55,6 +49,10 @@
     &:active {
       box-shadow: none;
       transform: translateY(1px);
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
